@@ -19,10 +19,11 @@ Plan:
   I`ll try to not to forget to do some notes right here about each step.
   
 NOTES:
-STEP 1.
+04.06.2021
   In order to make the learning process to be more interesting and fun I`ve made simple page with 3 input fields: 
                 - name;
                 - alignment;
                 - reason.
   The output field shows a pregenerated "introduction story". For example if you entered "John" + "Good" + "Cookies" the output will show: 
 									"The Good John who fight for cookies!"
+  Also have made a db (mysql 8) and a server (nginx) containers in docker-compose.
