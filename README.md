@@ -3,7 +3,7 @@ Just learning how to use Docker + Git + Jenkins + Postman
 
 Plan:
   1. Do a simple HTML page with some JS scripts, input and output fields.
-  2. Move this page to Docker.
+  2. Move this page to Docker. (well that was a fail step, I`ve just passed the site to nginx directly :) )
   3. Make a server in the Docker container.
   4. Make a database in the Docker container.
   5. Now we have 3 containers. One with the page the second with the server and the third one with DB. Those containers are connected by Docker Compose.
