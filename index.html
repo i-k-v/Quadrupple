@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPIC STORY</title>
+</head>
+<body>
+    <form name="newPlayer">
+        <p>
+            Hello! I`m trying to do a single page with some input fields.
+            Then I want to store that input in some DB.
+            And then output that data back to the page.
+        </p>
+
+        <p>
+            Put your name here
+            <br>
+            <input type="text" name="inputName" value="">
+        </p>
+
+        <p>
+            <input type="radio" name="side" value="Good">Good<br>
+            <input type="radio" name="side" value="Evil">Evil<br>
+            <input type="radio" name="side" value="Neutral">Neutral<br>
+        </p>
+        <p>
+            What you fight for?
+            <br>
+            <textarea name="reason" cols="50" rows="5"></textarea>
+            <br>
+        </p>
+
+        <p>
+            <input type="button" onclick="playerStory.value=side.value + ' ' + inputName.value + ' who fight for ' +  reason.value" value="Generate my introduction!">
+            <input type="reset" value="reset">
+            <br>
+        </p>
+
+        <p>
+            <output name="playerStory">
+                Your generated introduction story.
+            </output>
+        </p>
+
+        <p>
+            <output name="allPlayers">
+                The stories of all players!
+            </output>
+        </p>
+</body>
+</html>
