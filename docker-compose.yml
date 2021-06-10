@@ -1,28 +1,24 @@
 version: "3.8"
 
 services: 
-        data_base:
-            image: mysql:8.0
-            container_name: mysql_8
-            env_file: .env
-            volumes: 
-                - ./db:/var/lib/mysql
-            networks:
-                - quadro
-      
-        server:
-            image: nginx
-            container_name: nginx
-            ports: 
-                - 8000:80
-            volumes: 
-                - ./server:/usr/share/nginx/html
-                - /etc/nginx
-            networks: 
-                - quadro
-volumes: 
-    server:
-    db:
+    data_base:
+        image: mysql:8.0
+        container_name: mysql_8
+        env_file: .env
+        volumes: 
+            - ./db:/var/lib/mysql
+        
 
-networks: 
-    quadro:
+    server:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        ports: 
+            - 3000:3000
+        volumes: 
+            - .:/app
+            - '/app/node_modules'
+        links: 
+            - data_base
+        depends_on: 
+            - data_base
