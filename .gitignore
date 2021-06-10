@@ -134,3 +134,8 @@ dist
 
 # TernJS port file
 .tern-port
+*.000019
+
+# db mesql
+.ibt
+/db
